@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,.1); */
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-items-list {
+    margin: 0;
+    /* margin-right: 5%; */
+    background-color: #fff;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    font-weight: normal;
+}
+
+.nav-item.logo {
+  padding: 0.5rem 1rem;
+}
+
+.nav-item.logo a:hover, .nav-item.logo a:active {
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item.col a {
+  padding: 1rem 0rem;
+  /* padding-top: 1rem; */
+  /* margin-bottom: 0.5rem; */
+}
+
+.nav-item.logo a {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    color: rgb(154, 171, 185);
+    font-size: 2rem;
+    font-family: 'Patua One', cursive;
+
+    /* border: 0.5rem solid rgb(154, 171, 185); */
+    /* padding: 0.5rem 1rem; */
+    /* background-color: #fff; */
+
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.nav-item.col a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-family: 'Patua One', cursive;
+}
+
+.nav-item.col a:hover, .nav-item.col a:active {
+  color: white;
+  /* background-color: #D3D3D3; */
+  background-color: rgb(154, 171, 185);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item.col a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item.col a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav-items-list li {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    /* background-color: #fff; */
+    height: auto;
+    position: relative;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+/* @media (min-width:30em) {
+  .nav-item.col {
+    text-align: center;
+  }
+} */
+
+.nav-item.col {
+  text-align: center;
+}
+
+.flex-grid.parallax-img {
+   background-image: url(../img/geo-cubes.jpg);
+   /* Is there a way to create alts through this? */
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   width: 100%;
+   height: 100vh; /*vh is visual height, I believe. useful units*/
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+    color: #272727;
+    letter-spacing: 0.9px;
+    /* text-align: center; */
+    padding: 6rem;
+
+}
+
+.parallax-img-text {
+  /* display: inline-block; */
+  text-align: left;
+  font-size: 5.5rem;
+  color: red;
+  font-family: 'Lobster', cursive;
+}
