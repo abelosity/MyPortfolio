@@ -31,7 +31,7 @@ header {
 }
 
 .nav-item.col a {
-  padding: 1rem 0rem;
+  padding: 1.5rem 0rem;
   /* padding-top: 1rem; */
   /* margin-bottom: 0.5rem; */
 }
@@ -42,7 +42,7 @@ header {
     text-decoration: none;
     letter-spacing: 0.3rem;
     color: rgb(154, 171, 185);
-    font-size: 2rem;
+    font-size: 2.75rem;
     font-family: 'Patua One', cursive;
 
     /* border: 0.5rem solid rgb(154, 171, 185); */
@@ -73,7 +73,7 @@ header {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 5px;
   bottom: 0;
   left: 0;
   background-color: #000;
@@ -139,4 +139,81 @@ header {
   font-size: 5.5rem;
   color: red;
   font-family: 'Lobster', cursive;
+}
+
+.flex-grid.project-category-block {
+  background-color: rgb(2, 44, 180);
+  width: 100%;
+  /* height: auto; */
+  padding: 1rem 4rem;
+  display: flex;
+  /* float: left; */
+  /* flex-direction: row; */
+}
+
+.flex-grid.project-image-block {
+  display: inline-block;
+  /* float: left; */
+  /* flex-direction: row; */
+  /* height: auto; */
+  /* width: 40%; */
+  margin: 1rem;
+  /* margin: 1rem 0.5rem; */
+  padding: 1rem;
+  background-color: black;
+  /* justify-content: space-between; */
+}
+
+.flex-grid.project-image-block img{
+  width: 100%;
+  /* width: inherit; */
+}
+
+.flex-grid.project-image-block a:hover, .flex-grid.project-image-block a:active {
+  background-color: blue;
+}
+
+.flex-grid.about-me {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.flex-grid.project-desc {
+  padding: 4rem;
+  /* margin-top: 2rem; */
+}
+
+.project-image {
+  width: 100%;
+}
+
+.about-me-title {
+  /* display: inline-block; */
+  /* text-align: left; */
+  font-size: 3.5rem;
+  color: red;
+  font-family: 'Lobster', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me-text-2 {
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  color: gray;
+  font-family: 'Patua One', cursive;
+  /* padding: 2rem; */
+  margin: 0;
+}
+
+.about-me-text {
+  /* display: inline-block; */
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  color: black;
+  font-family: 'Patua One', cursive;
+  /* padding: 2rem; */
+  margin: 0;
 }
