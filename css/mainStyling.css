@@ -6,11 +6,19 @@ body {
 header {
   /* box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,.1); */
     display: block;
-    position: fixed;
+    position: sticky;
     width: 100%;
+    /* max-height: 10vh; */
     z-index: 100;
 }
 
+@media (min-width:55em) {
+  header {
+    height: 8vh;
+  }
+}
+
+/* NAV BAR STYLING START */
 .nav-items-list {
     margin: 0;
     /* margin-right: 5%; */
@@ -26,7 +34,7 @@ header {
 }
 
 .nav-item.logo a:hover, .nav-item.logo a:active {
-  color: black;
+  color: purple;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -102,118 +110,381 @@ header {
     transition: all linear 0.3s;
 }
 
-/* @media (min-width:30em) {
-  .nav-item.col {
-    text-align: center;
-  }
-} */
-
 .nav-item.col {
   text-align: center;
 }
+/* NAV BAR STYLING END */
 
+
+
+/* PARALLAX IMAGE STYLING START */
 .flex-grid.parallax-img {
    background-image: url(../img/geo-cubes.jpg);
-   /* Is there a way to create alts through this? */
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
    background-attachment: fixed;
-   width: 100%;
-   height: 100vh; /*vh is visual height, I believe. useful units*/
+   padding: 6rem;
 
+   letter-spacing: 0.9px;
+}
+
+.parallax-img-text-container {
+   width: inherit;
+   justify-content: center;
+   align-items: center;
+}
+
+.parallax-img-text, .parallax-img-text:before {
+   display: inline-block;
+   text-align: left;
+   /* font-size: 5.5rem; */
+   color: purple;
+   margin: 0;
+   font-family: 'Patua One', cursive;
+   /* font-family: 'Lobster', cursive; */
+   transition: all ease 0.3s;
+}
+
+ @-webkit-keyframes swing {
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing {
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/* LINK: https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
+
+ .parallax-img-text:hover, .parallax-img-text:active {
+   letter-spacing: 2px;
+   color: pink;
+   /* font-size: 7rem; */
+
+   /* font-weight: 750; */
+   /* font-family: 'Patua One', cursive; */
+   transition: all ease 0.3s;
+
+   /* code borrowed */
+   -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+ }
+
+/* @media (min-width:55em) { */
+@media (min-width:60em) {
+  .flex-grid.parallax-img {
+     /* background-image: url(../img/geo-cubes.jpg); */
+     /* Is there a way to create alts through this? */
+
+     /* background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-attachment: fixed; */
+
+     /* width: 100%; */
+     height: 92vh; /*vh is visual height, I believe. useful units*/
+
+     /* display: flex;
+     justify-content: center;
+     align-items: center; */
+
+      /* color: #272727; */
+      /* letter-spacing: 0.9px; */
+      /* text-align: center; */
+      padding: 6rem;
+
+  }
+
+  .parallax-img-text {
+    /* display: inline-block; */
+    font-size: 6.5rem;
+    /* font-size: 8vw; */
+  }
+}
+
+@media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
+  .flex-grid.parallax-img {
+    padding: 4rem;
+  }
+
+  .parallax-img-text {
+    /* display: inline-block; */
+    font-size: 4rem;
+  }
+}
+
+@media (max-width:41em) {
+  .flex-grid.parallax-img {
+    padding: 3rem;
+  }
+
+  .parallax-img-text {
+    /* display: inline-block; */
+    font-size: 3rem;
+  }
+}
+
+@media (max-width:31em) {
+  .flex-grid.parallax-img {
+    padding: 2.5rem;
+  }
+
+  .parallax-img-text {
+    /* display: inline-block; */
+    font-size: 2rem;
+  }
+}
+
+/* PARALLAX IMAGE STYLING END */
+
+/* INTRO STATEMENT STYLING START */
+/* .flex-grid.intro-statement {
+   background-image: url(../img/geo-cubes.jpg);
+   width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   padding: 6rem;
 
-    color: #272727;
-    letter-spacing: 0.9px;
-    /* text-align: center; */
-    padding: 6rem;
+   letter-spacing: 0.9px;
+}
+
+.intro-statement-text-container {
+   width: inherit;
+   justify-content: center;
+   align-items: center;
+} */
+/* INTRO STATEMENT STYLING END */
+
+/* PROJECT GRID STYLING START */
+.flex-grid.project-grid-display {
+   max-width: 100%;
+   /* display: flex; */
+   /* flex-direction: row; */
+   /* justify-content: center;
+   align-items: center; */
+
+   /* margin: 2rem 5rem; */
+
 
 }
 
-.parallax-img-text {
-  /* display: inline-block; */
-  text-align: left;
-  font-size: 5.5rem;
-  color: red;
-  font-family: 'Lobster', cursive;
+.flex-grid.project-grid-display, .project-grid-block {
+  float: left;
 }
 
-.flex-grid.project-category-block {
-  background-color: rgb(2, 44, 180);
-  width: 100%;
-  /* height: auto; */
-  padding: 1rem 4rem;
-  display: flex;
-  /* float: left; */
-  /* flex-direction: row; */
+.project-grid-block, .project-grid-block:before {
+   /* width: 50%; */
+   /* display: flex; */
+   /* flex: 2 2 25rem; */
+   /* display: inline-block; */
+   /* justify-content: center;
+   align-items: center; */
+   position: relative;
+   /* float: left; */
+   /* display: inline; */
+   object-fit: cover;
+   padding: 0.5rem;
+   /* margin: 1rem; */
+   /* padding: 0; */
 }
 
-.flex-grid.project-image-block {
-  display: inline-block;
-  /* float: left; */
-  /* flex-direction: row; */
-  /* height: auto; */
-  /* width: 40%; */
-  margin: 1rem;
-  /* margin: 1rem 0.5rem; */
-  padding: 1rem;
-  background-color: black;
-  /* justify-content: space-between; */
-}
-
-.flex-grid.project-image-block img{
-  width: 100%;
-  /* width: inherit; */
-}
-
-.flex-grid.project-image-block a:hover, .flex-grid.project-image-block a:active {
-  background-color: blue;
-}
-
-.flex-grid.about-me {
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.flex-grid.project-desc {
-  padding: 4rem;
-  /* margin-top: 2rem; */
-}
-
-.project-image {
-  width: 100%;
-}
-
-.about-me-title {
-  /* display: inline-block; */
-  /* text-align: left; */
-  font-size: 3.5rem;
-  color: red;
-  font-family: 'Lobster', cursive;
-  margin: 0;
+.project-grid-block:hover, .project-grid-block:active {
   padding: 0;
+  transition: all ease 0.3s;
 }
 
-.about-me-text-2 {
+.project-grid-block a img {
   width: 100%;
-  text-align: left;
-  font-size: 2rem;
-  color: gray;
-  font-family: 'Patua One', cursive;
-  /* padding: 2rem; */
-  margin: 0;
 }
 
-.about-me-text {
-  /* display: inline-block; */
-  width: 100%;
-  text-align: left;
-  font-size: 1.5rem;
-  color: black;
-  font-family: 'Patua One', cursive;
-  /* padding: 2rem; */
-  margin: 0;
+.project-grid-block a:hover, .project-grid-block a:active {
+  /* border: 2px blue; */
 }
+
+.hover-overlay,  .hover-overlay:before{
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* max-height: 100%;
+  max-width: 100%; */
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(22, 2, 2, 0.3);
+}
+
+/* .project-grid-block:hover, .project-grid-block:active {
+  padding: 0;
+  transition: all ease 0.3s;
+} */
+
+.project-grid-block a:hover .hover-overlay, .container:focus .hover-overlay {
+  opacity: 1;
+  margin: 0em;
+  transition: all ease 0.3s;
+}
+
+.overlay-text {
+  /* color: white;
+  font-size: 20px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-60%, -120%);
+  -ms-transform: translate(-60%, -120%); */
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* align-items: center; */
+  text-align: center;
+  padding: 0em;
+  margin: 0em;
+}
+
+.overlay-text p.project-grid-title {
+  color: white;
+  margin: 0em;
+  /* font-size: 5rem; */
+  /* font-size: 6vw; */
+  font-family: 'Patua One', cursive;
+}
+
+.overlay-text p.project-brief-desc {
+  color: white;
+  margin: 0em;
+  padding: 0em;
+  /* font-size: 1.5rem; */
+  /* font-size: 2vw; */
+  font-family: 'Patua One', cursive;
+}
+
+@media (min-width:60em) {
+  .flex-grid.project-grid-display {
+     padding: 2rem 5rem;
+     /* padding-bottom: 5rem; */
+  }
+
+  .project-grid-block {
+     width: 33%;
+  }
+
+  .overlay-text p.project-grid-title {
+    /* font-size: 4rem; */
+    font-size: 6vw;
+  }
+
+  .overlay-text p.project-brief-desc {
+    /* font-size: 2rem; */
+    font-size: 2vw;
+  }
+}
+
+@media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
+  .flex-grid.project-grid-display {
+     padding: 2rem 2rem;
+  }
+
+  .project-grid-block {
+     width: 50%;
+  }
+
+  .overlay-text p.project-grid-title {
+    /* font-size: 4rem; */
+    font-size: 7vw;
+  }
+
+  .overlay-text p.project-brief-desc {
+    /* font-size: 2rem; */
+    font-size: 3vw;
+  }
+}
+
+@media (max-width:30em) {
+  .project-grid-block {
+     width: 100%;
+  }
+
+  .overlay-text p.project-grid-title {
+    /* font-size: 4rem; */
+    font-size: 12vw;
+  }
+
+  .overlay-text p.project-brief-desc {
+    /* font-size: 2rem; */
+    font-size: 5vw;
+  }
+}
+
+/* PROJECT GRID STYLING END */
