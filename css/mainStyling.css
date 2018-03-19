@@ -234,7 +234,8 @@ header {
  }
 
 /* @media (min-width:55em) { */
-@media (min-width:60em) {
+
+/* @media (min-width:60em) { */
   .flex-grid.parallax-img {
      /* background-image: url(../img/geo-cubes.jpg); */
      /* Is there a way to create alts through this? */
@@ -263,7 +264,8 @@ header {
     font-size: 6.5rem;
     /* font-size: 8vw; */
   }
-}
+  
+/* } */
 
 @media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
   .flex-grid.parallax-img {
