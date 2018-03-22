@@ -67,12 +67,14 @@ header {
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
-  font-family: 'Patua One', cursive;
+  /* font-family: 'Patua One', cursive; */
+  font-family: 'Comfortaa', cursive;
 }
 
 .nav-item.col a:hover, .nav-item.col a:active {
   color: white;
   /* background-color: #D3D3D3; */
+  /* letter-spacing: 2px; */
   background-color: rgb(154, 171, 185);
   transition: all 0.3s ease-in-out 0s;
 }
@@ -146,6 +148,7 @@ header {
    color: purple;
    margin: 0;
    font-family: 'Patua One', cursive;
+   /* font-family: 'Comfortaa', cursive; */
    /* font-family: 'Lobster', cursive; */
    transition: all ease 0.3s;
 }
@@ -235,7 +238,7 @@ header {
 
 /* @media (min-width:55em) { */
 
-/* @media (min-width:60em) { */
+@media (min-width:60em) {
   .flex-grid.parallax-img {
      /* background-image: url(../img/geo-cubes.jpg); */
      /* Is there a way to create alts through this? */
@@ -258,13 +261,14 @@ header {
       padding: 6rem;
 
   }
+}
 
   .parallax-img-text {
     /* display: inline-block; */
     font-size: 6.5rem;
     /* font-size: 8vw; */
   }
-  
+
 /* } */
 
 @media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
@@ -490,3 +494,129 @@ header {
 }
 
 /* PROJECT GRID STYLING END */
+
+/* PROJECT PAGE DISPLAY START */
+.purple {
+  background-color: indigo;
+}
+
+.project-page-display {
+  width: 100%;
+  /* padding: 0 8rem; */
+}
+
+.project-display {
+  padding: 0 8rem;
+}
+
+.whitespace {
+  height: 6rem;
+  display: block;
+}
+
+.title-statement h1 {
+  color: white;
+  /* font-family: 'Patua One', cursive; */
+  font-family: 'Comfortaa', cursive;
+  font-size: 4rem;
+  padding: 0;
+  padding-right: 1rem;
+  margin: 0;
+  /* float: left; */
+  display: inline-block;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* h1:before.interactive-project-title {
+  letter-spacing: 0px;
+  transition: all 0.3s ease-in-out 0s;
+} */
+
+h1:hover.interactive-project-title, h1:active.interactive-project-title {
+  letter-spacing: 5px;
+  color: lightpink;
+  /* font-weight: bolder; */
+  transition: all 0.3s ease-in-out 0s;
+  /* transition: all ease 0.3s; */
+}
+
+.phase-title h2 {
+  color: darkblue;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1rem;
+  padding: 0;
+  padding-top: 2rem;
+  margin: 0;
+}
+
+.phase-heading h3 {
+  color: darkblue;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+
+  padding: 1rem 0;
+  /* padding-bottom: 2rem; */
+  padding-left: 10rem;
+  margin: 0;
+}
+
+.phase-content p {
+  color: gray;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1rem;
+  padding: 1rem 5rem 2rem 10rem;
+  /* padding-left: 10rem;
+  padding-right: 5rem;
+  padding-bottom: 2rem; */
+  margin: 0;
+}
+
+@media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
+  /* .parallax-img-text {
+    font-size: 4rem;
+  } */
+
+  .project-display {
+    padding: 0 4rem;
+  }
+
+  .phase-heading h3, .phase-content p {
+    padding-left: 8rem;
+  }
+}
+
+@media (max-width:41em) {
+  /* .parallax-img-text {
+    font-size: 3rem;
+  } */
+
+  .project-display {
+    padding: 0 0 0 4rem;
+  }
+
+  .phase-heading h3, .phase-content p {
+    padding-left: 5rem;
+  }
+}
+
+@media (max-width:31em) {
+  /* .parallax-img-text {
+    font-size: 2rem;
+  } */
+
+  .project-display {
+    padding: 0 2rem;
+  }
+
+  .phase-heading h3, .phase-content p {
+    padding-left: 0rem;
+    padding-right: 4rem;
+  }
+
+  .phase-heading h3 {
+    padding-bottom: 0;
+  }
+}
+
+
+/* PROJECT PAGE DISPLAY END */
