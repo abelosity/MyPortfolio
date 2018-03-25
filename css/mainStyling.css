@@ -7,16 +7,16 @@ header {
   /* box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,.1); */
     display: block;
     position: sticky;
+    /* position: fixed; */
     width: 100%;
+    height: 8vh;
     /* max-height: 10vh; */
     z-index: 100;
 }
 
-@media (min-width:55em) {
-  header {
-    height: 8vh;
-  }
-}
+/* .flex-grid.container {
+  padding-top: 8vh;
+} */
 
 /* NAV BAR STYLING START */
 .nav-items-list {
@@ -75,7 +75,10 @@ header {
   color: white;
   /* background-color: #D3D3D3; */
   /* letter-spacing: 2px; */
-  background-color: rgb(154, 171, 185);
+
+  /* background-color: rgb(154, 171, 185); */
+  background-color: rgb(154, 100, 180);
+  /* background-color: lavender; */
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -330,6 +333,15 @@ header {
 /* INTRO STATEMENT STYLING END */
 
 /* PROJECT GRID STYLING START */
+.main-item-title h1 {
+  color: darkblue;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+
+  padding: 2rem 0;
+  margin: 0;
+}
+
 .flex-grid.project-grid-display {
    max-width: 100%;
    /* display: flex; */
@@ -356,7 +368,7 @@ header {
    position: relative;
    /* float: left; */
    /* display: inline; */
-   object-fit: cover;
+   /* object-fit: cover; */
    padding: 0.5rem;
    /* margin: 1rem; */
    /* padding: 0; */
@@ -424,7 +436,8 @@ header {
   margin: 0em;
   /* font-size: 5rem; */
   /* font-size: 6vw; */
-  font-family: 'Patua One', cursive;
+  /* font-family: 'Patua One', cursive; */
+  font-family: 'Comfortaa', cursive;
 }
 
 .overlay-text p.project-brief-desc {
@@ -433,7 +446,25 @@ header {
   padding: 0em;
   /* font-size: 1.5rem; */
   /* font-size: 2vw; */
-  font-family: 'Patua One', cursive;
+  /* font-family: 'Patua One', cursive; */
+  font-family: 'Comfortaa', cursive;
+}
+
+.contact-me {
+  padding-left: 10rem;
+}
+
+.contact-me h1 {
+  color: darkblue;
+  /* font-family: 'Patua One', cursive; */
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+  padding: 0;
+  padding-right: 1rem;
+  margin: 0;
+  /* float: left; */
+  display: inline-block;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 @media (min-width:60em) {
@@ -448,12 +479,12 @@ header {
 
   .overlay-text p.project-grid-title {
     /* font-size: 4rem; */
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .overlay-text p.project-brief-desc {
     /* font-size: 2rem; */
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 }
 
@@ -498,6 +529,10 @@ header {
 /* PROJECT PAGE DISPLAY START */
 .purple {
   background-color: indigo;
+}
+
+.green {
+  background-color: rgb(0, 170, 130);
 }
 
 .project-page-display {
@@ -571,6 +606,26 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   margin: 0;
 }
 
+.photo-set-block {
+  width: 49%;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  /* object-fit:  */
+}
+
+.photo-set-image {
+
+  /* width: 40%; */
+  /* object-fit: cover; */
+}
+.photo-set-image img {
+  /* width: 40vw; */
+  width: 100%;
+  /* display: inline-block; */
+  /* object-fit: cover; */
+}
+
 @media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
   /* .parallax-img-text {
     font-size: 4rem;
@@ -616,7 +671,66 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   .phase-heading h3 {
     padding-bottom: 0;
   }
+
+  .photo-set-block {
+    width: 100%;
+    display: inline-block;
+    /* object-fit:  */
+  }
 }
 
 
 /* PROJECT PAGE DISPLAY END */
+
+/* STYLEGUIDE FORMATTING TWEAKS START */
+.styleguide-display {
+  width: 100%;
+  /* padding: 0 8rem; */
+}
+
+.lavender {
+  background-color: lavender;
+}
+
+.styleguide-display.whitespace {
+  height: 3rem;
+}
+
+.item-title h1 {
+  color: darkblue;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+
+  padding: 0 0;
+  padding-bottom: 2rem;
+  padding-left: 6rem;
+  margin: 0;
+}
+
+.styleguide-display.title-statement {
+  padding-left: 6rem;
+}
+
+.title-statement-alt h1{
+  color: indigo;
+  padding-top: 2rem;
+}
+
+h1.font-1{
+  font-family: 'Patua One', cursive;
+  color: indigo;
+  padding-bottom: 1rem;
+}
+
+h1.font-2{
+  font-family: 'Comfortaa', cursive;
+  color: indigo;
+  padding-bottom: 1rem;
+}
+
+
+.styleguide-display.phase-title h2, .styleguide-display.phase-heading h3, .styleguide-display.phase-content p{
+  padding: 1rem 0;
+  padding-left: 6rem;
+}
+/* STYLEGUIDE FORMATTING TWEAKS END */

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>highlyDesirabel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/mainStyling.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav id="nav-items">
+        <ul class="nav-items-list flex-grid-nav">
+          <li class="nav-item logo">
+            <a href="#">style.</a>
+          </li>
+
+          <li class="nav-item col">
+            <a href="#visuals">visuals</a>
+          </li>
+          <li class="nav-item col">
+            <a href="#text">text</a>
+          </li>
+          <li class="nav-item col">
+            <a href="#about-me">complex</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="flex-grid container">
+      <div id="visuals">
+        <div class="styleguide-display whitespace lavender"></div>
+        <div class="styleguide-display item-title lavender">
+          <h1>Parallax image with scroll effect and interactive text.</h1>
+        </div>
+        <div class="flex-grid parallax-img">
+          <div class="parallax-img-text-container">
+            <!-- <p class="parallax-img-text">product designer. doodler. maker. conversationalist. tea connoisseur.</p> -->
+
+            <p class="parallax-img-text">examples of.</p>
+            <p class="parallax-img-text">interactive.</p>
+            <p class="parallax-img-text">floating.</p>
+            <p class="parallax-img-text">text items.</p>
+            <!-- <p class="parallax-img-text">tea connoisseur.</p> -->
+          </div>
+        </div>
+        <div class="styleguide-display whitespace lavender"></div>
+
+        <div class="styleguide-display item-title lavender">
+          <h1>Project page title banner</h1>
+        </div>
+        <div class="styleguide-display whitespace purple"></div>
+        <div class="styleguide-display title-statement purple">
+          <h1>this is a</h1><h1 class="interactive-project-title">project.</h1>
+        </div>
+        <div class="styleguide-display whitespace purple"></div>
+        <div class="styleguide-display whitespace lavender"></div>
+
+        <div class="styleguide-display item-title lavender">
+          <h1>Navigation bar</h1>
+        </div>
+        <nav id="nav-items">
+          <ul class="nav-items-list flex-grid-nav">
+            <li class="nav-item logo">
+              <a href="index.html">abelo.</a>
+            </li>
+
+            <li class="nav-item col">
+              <a href="index.html#projects">work</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#">resume</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#about-me">me</a>
+            </li>
+            <!-- <li class="nav-item col">contact</li> -->
+          </ul>
+        </nav>
+        <div class="styleguide-display whitespace lavender"></div>
+      </div>
+
+      <div id="text">
+        <div class="styleguide-display item-title lavender">
+          <h1>Text fonts</h1>
+        </div>
+        <div class="styleguide-display title-statement font-statement">
+          <h1 class="font-1">Patua One.</h1><h1 class="font-2">Comfortaa.</h1>
+        </div>
+        <div class="styleguide-display whitespace lavender"></div>
+
+        <div class="styleguide-display item-title lavender">
+          <h1>Text hierarchy</h1>
+        </div>
+        <div class="styleguide-display title-statement title-statement-alt">
+          <h1>Heading 1 with</h1><h1 class="interactive-project-title">hover.</h1>
+        </div>
+        <div class="styleguide-display phase-heading">
+          <h3>Heading 2</h3>
+        </div>
+        <div class="styleguide-display phase-title">
+          <h2>Heading 3</h2>
+        </div>
+        <div class="styleguide-display phase-content">
+          <p>Paragraph text - lorem ipsum potato tomato jibber jabber yabber woot hoot kahlua.</p>
+        </div>
+      </div>
+
+      <div id="complex">
+        <div class="styleguide-display whitespace lavender"></div>
+        <div class="styleguide-display item-title lavender">
+          <h1>Project grid display</h1>
+        </div>
+
+        <div id="projects" class="flex-grid project-grid-display">
+          <div class="project-grid-block">
+            <a href="diyspo.html">
+              <img src="img/diyspo-1.jpg">
+              <div class="hover-overlay">
+                <div class="overlay-text">
+                  <p class="project-grid-title">diyspo</p>
+                  <p class="project-brief-desc">a medical purpose VR headset</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-grid-block">
+            <a href="bude.html">
+              <img src="img/geo-cubes.jpg">
+              <div class="hover-overlay">
+                <div class="overlay-text">
+                  <p class="project-grid-title">BUDe</p>
+                  <p class="project-brief-desc">a smart plant companion module</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-grid-block">
+            <a href="#">
+              <img src="img/diyspo-1.jpg">
+              <div class="hover-overlay">
+                <div class="overlay-text">
+                  <p class="project-grid-title">project 2</p>
+                  <p class="project-brief-desc">a brief description</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
