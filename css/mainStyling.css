@@ -6,12 +6,16 @@ body {
 header {
   /* box-shadow: 0 0.1rem 0.1rem 0 rgba(0,0,0,.1); */
     display: block;
-    position: sticky;
-    /* position: fixed; */
+    /* position: sticky; */
+    position: fixed;
     width: 100%;
-    height: 8vh;
+    /* height: 8vh; */
     /* max-height: 10vh; */
     z-index: 100;
+}
+
+main {
+  padding-top: 3rem;
 }
 
 /* .flex-grid.container {
@@ -30,7 +34,7 @@ header {
 }
 
 .nav-item.logo {
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .nav-item.logo a:hover, .nav-item.logo a:active {
@@ -39,15 +43,17 @@ header {
 }
 
 .nav-item.col a {
-  padding: 1.5rem 0rem;
+  /* padding: 1.5rem 0rem; */
   /* padding-top: 1rem; */
   /* margin-bottom: 0.5rem; */
 }
 
 .nav-item.logo a {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     text-decoration: none;
+    /* width: 100%; */
+    display: block;
     letter-spacing: 0.3rem;
     color: rgb(154, 171, 185);
     font-size: 2.75rem;
@@ -61,6 +67,10 @@ header {
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
 }
+li.nav-item.col {
+  margin: 0;
+  padding: 0;
+}
 
 .nav-item.col a {
   display: block;
@@ -69,6 +79,7 @@ header {
   font-size: 1.2rem;
   /* font-family: 'Patua One', cursive; */
   font-family: 'Comfortaa', cursive;
+  padding: 1rem 0rem;
 }
 
 .nav-item.col a:hover, .nav-item.col a:active {
@@ -118,13 +129,51 @@ header {
 .nav-item.col {
   text-align: center;
 }
+
+@media (min-width:55em) { /* THE SCREEN IS 55EM WIDE OR GREATER */
+  .nav-item.logo{
+    width: 55%;
+  }
+
+  .nav-item.col {
+    width: 15%;
+  }
+}
+
+@media (max-width:55em) { /* THE SCREEN IS 55EM WIDE OR GREATER */
+  main {
+    padding-top: 6rem;
+  }
+
+  .nav-item.logo {
+    width: 100%;
+    align-items:center;
+    padding: 0.25rem 1rem;
+  }
+
+  .nav-item.logo a{
+    /* align-items: center; */
+    text-align: center;
+  }
+
+  .nav-item.col {
+    width: 33.3%;
+    /* padding: 0.5rem 1rem; */
+  }
+  .nav-item.col a {
+    padding: 0.75rem 0rem;
+    /* padding-top: 1rem; */
+    /* margin-bottom: 0.5rem; */
+  }
+}
 /* NAV BAR STYLING END */
 
 
 
 /* PARALLAX IMAGE STYLING START */
 .flex-grid.parallax-img {
-   background-image: url(../img/geo-cubes.jpg);
+   /* background-image: url(../img/geo-cubes.jpg); */
+   background-image: url(../img/parallax-background-2.jpg);
    width: 100%;
    display: flex;
    justify-content: center;
@@ -148,7 +197,8 @@ header {
    display: inline-block;
    text-align: left;
    /* font-size: 5.5rem; */
-   color: purple;
+   /* color: purple; */
+   color: white;
    margin: 0;
    font-family: 'Patua One', cursive;
    /* font-family: 'Comfortaa', cursive; */
@@ -225,7 +275,7 @@ header {
 
  .parallax-img-text:hover, .parallax-img-text:active {
    letter-spacing: 2px;
-   color: pink;
+   color: lavender;
    /* font-size: 7rem; */
 
    /* font-weight: 750; */
@@ -241,7 +291,37 @@ header {
 
 /* @media (min-width:55em) { */
 
-@media (min-width:60em) {
+a.wrapper.paperfold {
+  font-family: 'Patua One', cursive;
+  margin: 0 auto;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+
+
+a.stroke-outline-doodle {
+  font-family: 'Patua One', cursive;
+  margin: 0 auto;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+
+a.space-out-text {
+  font-family: 'Patua One', cursive;
+  margin: 0 auto;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  letter-spacing: 0.9px;
+}
+
+
+
+@media (min-width:65em) {
   .flex-grid.parallax-img {
      /* background-image: url(../img/geo-cubes.jpg); */
      /* Is there a way to create alts through this? */
@@ -266,15 +346,166 @@ header {
   }
 }
 
+
+@media (min-width:65em) {
+  .wrapper {
+    transform: translate(0%, 0%) skew(0deg) rotate(0deg);
+  }
+
+  a.wrapper.paperfold h1 {
+    -webkit-transform: translate(0%, 0%) skew(0deg) rotate(-0deg);
+            transform: translate(0%, 0%) skew(0deg) rotate(-0deg);
+    font-size: 6.5rem;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    font-weight: 900;
+    color: gray;
+    /* color: #9F86C0; */
+    /* color: #D5C6E0; */
+    white-space: nowrap;
+  }
+
+  a.wrapper.paperfold h1:before {
+    content: attr(data-heading);
+    position: absolute;
+    left: 0;
+    top: -4.8%;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    color: white;
+    -webkit-transform: translate(0, 0.36rem) skew(-0deg) scale(1, 1.01);
+            transform: translate(0, 0.36rem) skew(-0deg) scale(1, 1.01);
+            transition: all ease 1.2s;
+    z-index: 2;
+  }
+
+  a.wrapper.paperfold h1:after {
+    content: attr(data-heading);
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    -webkit-transform: translate(0, 0) skew(0deg) scale(1, 1);
+            transform: translate(0, 0) skew(0deg) scale(1, 1);
+            transition: all ease 1s;
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+  }
+
+  a.wrapper.paperfold:hover h1:before, a.wrapper.paperfold:active h1:before {
+    color: #fbf7f4;
+    -webkit-transform: translate(0.55rem, 0) skew(-13deg) scale(1, 1.2);
+            transform: translate(0.55rem, 0) skew(-13deg) scale(1, 1.2);
+            transition: all ease 1.5s;
+  }
+
+  a.wrapper.paperfold:hover h1:after, a.wrapper.paperfold:active h1:after {
+    color: #d3cfcc;
+    -webkit-transform: translate(0, 0) skew(13deg) scale(1, 0.8);
+            transform: translate(0, 0) skew(13deg) scale(1, 0.8);
+            transition: all ease 1s;
+  }
+
+
+
+
+
+
+
+
+
+
+  a.stroke-outline-doodle h1 {
+    font-size: 6.5rem;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    /* text-rendering: optimizeLegibility; */
+    /* font-weight: 900; */
+    color: white;
+    /* white-space: nowrap; */
+  }
+
+  a.stroke-outline-doodle:hover h1, a.stroke-outline-doodle:active h1 {
+    -webkit-text-stroke: 0.4px grey;
+   color: lavender;
+   /* text-shadow:
+       1px 1px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000; */
+
+   text-shadow:
+       3px 3px 0 grey,
+     -1px -1px 0 grey,
+      1px -1px 0 grey,
+      -1px 1px 0 grey,
+       1px 1px 0 grey;
+
+    transition: all ease 1.5s;
+  }
+
+
+
+
+
+
+  a.space-out-text h1, a.space-out-text:before {
+    /* letter-spacing: 0.9px; */
+    font-size: 6.5rem;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    /* text-rendering: optimizeLegibility; */
+    /* font-weight: 900; */
+    color: white;
+    /* white-space: nowrap; */
+    transition: all ease 0.3s;
+  }
+
+  a.space-out-text:hover h1, a.space-out-text:active h1{
+    letter-spacing: 5px;
+    /* transition: all ease 0.5s; */
+    /* color: #9F86C0; */
+    color: #7F2CCB;
+
+    /* code borrowed */
+    -webkit-animation: swing 1s ease;
+         animation: swing 1s ease;
+         /* -webkit-animation-iteration-count: 1;
+         animation-iteration-count: 1; */
+  }
+
+
+}
+
+
+@media (max-width:65em) {
+  a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
+    font-size: 5rem;
+    color: white;
+    margin: 0;
+  }
+
   .parallax-img-text {
     /* display: inline-block; */
     font-size: 6.5rem;
     /* font-size: 8vw; */
   }
 
+
+
 /* } */
 
-@media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
+@media (max-width:65em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
   .flex-grid.parallax-img {
     padding: 4rem;
   }
@@ -336,7 +567,7 @@ header {
 .main-item-title h1 {
   color: darkblue;
   font-family: 'Comfortaa', cursive;
-  font-size: 2rem;
+  font-size: 3rem;
 
   padding: 2rem 0;
   margin: 0;
@@ -344,6 +575,7 @@ header {
 
 .flex-grid.project-grid-display {
    max-width: 100%;
+   display: block;
    /* display: flex; */
    /* flex-direction: row; */
    /* justify-content: center;
@@ -368,8 +600,8 @@ header {
    position: relative;
    /* float: left; */
    /* display: inline; */
-   /* object-fit: cover; */
-   padding: 0.5rem;
+   object-fit: cover;
+   /* padding: 0.5rem; */
    /* margin: 1rem; */
    /* padding: 0; */
 }
@@ -379,17 +611,29 @@ header {
   transition: all ease 0.3s;
 }
 
-.project-grid-block a img {
+/* .project-grid-block a img {
   width: 100%;
+  object-fit:cover;
+} */
+
+div.project-grid-block a img.img-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+.diyspo-image {
+  object-position: 0% 50%;
 }
 
 .project-grid-block a:hover, .project-grid-block a:active {
   /* border: 2px blue; */
 }
 
-.hover-overlay,  .hover-overlay:before{
+.hover-overlay, .hover-overlay:before{
   width: 100%;
-  margin: 0.5rem;
+  height: 100%;
+  /* margin: 0.5rem; */
   padding: 0;
   position: absolute;
   top: 0;
@@ -410,7 +654,9 @@ header {
 
 .project-grid-block a:hover .hover-overlay, .container:focus .hover-overlay {
   opacity: 1;
-  margin: 0em;
+  width: 100%;
+  height: 100%;
+  /* margin: 0em; */
   transition: all ease 0.3s;
 }
 
@@ -418,6 +664,8 @@ header {
   /* color: white;
   font-size: 20px; */
   position: absolute;
+  width: 100%;
+  /* height: 100%; */
   top: 50%;
   left: 50%;
   /* transform: translate(-60%, -120%);
@@ -425,7 +673,10 @@ header {
 
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  /* align-items: center; */
+
+  /* transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%); */
+  align-items: center;
   text-align: center;
   padding: 0em;
   margin: 0em;
@@ -451,6 +702,8 @@ header {
 }
 
 .contact-me {
+  display: block;
+  padding-top: 3rem;
   padding-left: 10rem;
 }
 
@@ -469,12 +722,17 @@ header {
 
 @media (min-width:60em) {
   .flex-grid.project-grid-display {
-     padding: 2rem 5rem;
+     /* padding: 2rem 5rem; */
+     padding: 0rem 0rem;
      /* padding-bottom: 5rem; */
   }
 
   .project-grid-block {
-     width: 33%;
+     /* width: 50%;
+     height: 30rem; */
+
+     width: 50vw;
+     height: 60vh;
   }
 
   .overlay-text p.project-grid-title {
@@ -490,11 +748,16 @@ header {
 
 @media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
   .flex-grid.project-grid-display {
-     padding: 2rem 2rem;
+     padding: 0rem 0rem;
+     /* padding: 2rem 2rem; */
   }
 
   .project-grid-block {
      width: 50%;
+  }
+
+  .main-item-title h1 {
+    font-size: 2rem;
   }
 
   .overlay-text p.project-grid-title {
@@ -511,6 +774,10 @@ header {
 @media (max-width:30em) {
   .project-grid-block {
      width: 100%;
+  }
+
+  .main-item-title h1 {
+    font-size: 2rem;
   }
 
   .overlay-text p.project-grid-title {
@@ -681,6 +948,141 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
 
 /* PROJECT PAGE DISPLAY END */
+
+/* ABOUT ME PAGE START*/
+.about-me-display {
+  padding: 0 8rem;
+}
+
+.about-me-display.about-me-image {
+  width: 100%;
+  margin-top: 3rem;
+  /* margin: auto; */
+  align-items: center;
+  align-content: center;
+  padding: 0 30%;
+  /* padding:; */
+}
+
+.about-me-display.about-me-image img {
+  /* display: inline-block; */
+  /* padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; */
+  /* width: auto; */
+
+  /* padding-left: 30%; */
+  /* margin: 0; */
+  /* align-items: center; */
+}
+
+.about-me-image-block {
+  display: block;
+  background-color: purple;
+  border-radius: 100%;
+  width: 100%;
+  /* padding: 0 5rem; */
+}
+.about-me-image-block img{
+  width: 100%;
+}
+
+.about-me-display.about-me-title, .about-me-display.about-me-blurb {
+  margin-right: 10rem;
+}
+
+.about-me-display.about-me-title h2 {
+  color: darkblue;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+
+  padding: 1rem 0;
+  /* padding-bottom: 2rem; */
+  margin: 0;
+}
+
+.about-me-display.about-me-blurb h3 {
+  color: black;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+  font-weight: lighter;
+
+  padding: 1rem 0;
+  /* padding-bottom: 2rem; */
+  margin: 0;
+}
+
+.about-me-display.contact-me h2 {
+  color: darkblue;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+
+  padding: 1rem 0;
+  /* padding-bottom: 2rem; */
+  margin: 0;
+}
+
+@media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
+  .about-me-display.about-me-title, .about-me-display.about-me-blurb {
+    margin-right: 5rem;
+  }
+
+  .about-me-display.whitespace {
+    height: 4rem;
+  }
+
+  .about-me-display.about-me-image {
+    padding: 0 25%;
+  }
+
+  .about-me-display.about-me-title h2, .about-me-display.contact-me h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-me-display.about-me-blurb h3 {
+    font-size: 1.6rem;
+  }
+
+  .about-me-display {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width:41em) {
+  .about-me-display.about-me-title, .about-me-display.about-me-blurb {
+    margin-right: 0rem;
+  }
+
+  .about-me-display.whitespace {
+    height: 2rem;
+  }
+
+  .about-me-display.about-me-image {
+    padding: 0 20%;
+  }
+
+  .about-me-display.about-me-title h2, .about-me-display.contact-me h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-me-display.about-me-blurb h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-me-display {
+    padding: 0 2rem;
+  }
+}
+
+/* ABOUT ME PAGE END */
+
+
+
 
 /* STYLEGUIDE FORMATTING TWEAKS START */
 .styleguide-display {
