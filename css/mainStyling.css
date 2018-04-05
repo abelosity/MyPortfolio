@@ -399,8 +399,25 @@ a.space-out-text {
             clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
   }
 
+  a.wrapper.paperfold.product-designer:hover h1:before, a.wrapper.paperfold.product-designer:active h1:before {
+    /* color: #fbf7f4; */
+    color: #FF5E5B;
+    -webkit-transform: translate(0.55rem, 0) skew(-13deg) scale(1, 1.2);
+            transform: translate(0.55rem, 0) skew(-13deg) scale(1, 1.2);
+            transition: all ease 1.5s;
+  }
+
+  a.wrapper.paperfold.product-designer:hover h1:after, a.wrapper.paperfold.product-designer:active h1:after {
+    /* color: #d3cf?; */
+    color: #CC4B49;
+    -webkit-transform: translate(0, 0) skew(13deg) scale(1, 0.8);
+            transform: translate(0, 0) skew(13deg) scale(1, 0.8);
+            transition: all ease 1s;
+  }
+
   a.wrapper.paperfold:hover h1:before, a.wrapper.paperfold:active h1:before {
     color: #fbf7f4;
+    /* color: #FF5E5B; */
     -webkit-transform: translate(0.55rem, 0) skew(-13deg) scale(1, 1.2);
             transform: translate(0.55rem, 0) skew(-13deg) scale(1, 1.2);
             transition: all ease 1.5s;
@@ -408,6 +425,7 @@ a.space-out-text {
 
   a.wrapper.paperfold:hover h1:after, a.wrapper.paperfold:active h1:after {
     color: #d3cfcc;
+    /* color: #CC4B49; */
     -webkit-transform: translate(0, 0) skew(13deg) scale(1, 0.8);
             transform: translate(0, 0) skew(13deg) scale(1, 0.8);
             transition: all ease 1s;
@@ -749,7 +767,7 @@ div.project-grid-block a img.img-fit-cover {
 }
 
 div.title-statement {
-  width: 35%;
+  width: 100%;
   padding: 0;
   margin: 0;
   display: inline-block;
@@ -757,7 +775,7 @@ div.title-statement {
 
 div.project-partner-list {
   /* float: left; */
-  /* width: 40%; */
+  width: 100%;
   padding: 0;
   margin: 0;
   display: inline-block;
@@ -850,6 +868,7 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 }
 
 .phase-image-photo img {
+  padding: 0.2rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -858,16 +877,32 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
 }
 
+.image-33-percent {
+  width: 33%;
+}
+
 .image-45-percent {
   width: 45%;
+}
+
+.image-50-percent {
+  width: 50%;
 }
 
 .image-55-percent {
   width: 55%;
 }
 
+.image-66-percent {
+  width: 66%;
+}
+
 @media (max-width:75em) {
-  .image-45-percent, .image-55-percent {
+  .image-66-percent, .image-55-percent, .image-50-percent, .image-45-percent, .image-33-percent {
+    width: 100%;
+  }
+
+  div.title-statement, div.project-partner-list {
     width: 100%;
   }
 }
@@ -893,10 +928,6 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
   .project-display.whitespace {
     height: 4rem;
-  }
-
-  div.title-statement, div.project-partner-list {
-    width: 100%;
   }
 
   .project-partner-list h2{
@@ -951,16 +982,21 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   width: 100%;
 }
 
-.about-me-display.about-me-title, .about-me-display.about-me-blurb {
-  margin-right: 10rem;
+/* .about-me-display.about-me-title,  */
+
+.about-me-display.about-me-blurb {
+  /* margin-right: 10rem; */
+  margin: 0 10rem;
 }
 
 .about-me-display.about-me-title h2 {
   color: darkblue;
-  font-family: 'Comfortaa', cursive;
-  font-size: 2rem;
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: 'Patua One', cursive;
+  font-weight: lighter;
+  font-size: 3rem;
   font-weight: bold;
-  text-align: right;
+  text-align: center;
 
   padding: 1rem 0;
   margin: 0;
@@ -989,7 +1025,7 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
 @media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
   .about-me-display.about-me-title, .about-me-display.about-me-blurb {
-    margin-right: 5rem;
+    margin: 0 5rem;
   }
 
   .about-me-display.whitespace {
@@ -1015,7 +1051,7 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
 @media (max-width:41em) {
   .about-me-display.about-me-title, .about-me-display.about-me-blurb {
-    margin-right: 0rem;
+    margin: 0rem;
   }
 
   .about-me-display.whitespace {
