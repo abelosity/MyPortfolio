@@ -14,6 +14,10 @@ main {
   padding-top: 3rem;
 }
 
+footer {
+  width: 100%;
+}
+
 /* NAV BAR STYLING START */
 .nav-items-list {
     margin: 0;
@@ -72,27 +76,6 @@ li.nav-item.col {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-item.col a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.nav-item.col a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
 .nav-items-list li {
     flex: 1 1 auto;
     margin: 0;
@@ -112,11 +95,13 @@ li.nav-item.col {
 
 
 .footer-items-list {
+    /* display: block; */
     margin: 0;
+    padding: 0;
     width: 100%;
+    height: 9rem;
 
     background-color: #E8E9F3;
-    padding: 0;
     list-style: none;
     align-items: center;
     font-weight: normal;
@@ -135,23 +120,52 @@ li.footer-item.col {
 .footer-item.col a {
   display: block;
   text-decoration: none;
-  color: rgb(154, 171, 185);
+  /* color: rgb(154, 171, 185); */
+  color: black;
+  background-color: lavender;
   font-size: 1.2rem;
 
   font-family: 'Comfortaa', cursive;
   padding: 1rem;
 }
 
+/* .footer-item.col a {
+  color: black;
+  background-color: lavender;
+} */
+
 .footer-item.col a:hover, .footer-item.col a:active {
+  color: black;
+  background-color: #D3D3D3;
+}
+
+/* .footer-item.col a:hover, .footer-item.col a:active {
   color: black;
   background-color: #D3D3D3;
 
   transition: all 0.3s ease-in-out 0s;
-}
+} */
 
 @media (min-width:30em) {
+  .footer-items-list {
+    height: 3rem;
+  }
+
   li.footer-item.col {
-    width: 33%;
+    width: 33.33%;
+    height: 3rem;
+  }
+
+  .footer-item.col a {
+    color: rgb(154, 171, 185);
+    background-color: white;
+  }
+
+  .footer-item.col a:hover, .footer-item.col a:active {
+    color: black;
+    background-color: #D3D3D3;
+
+    transition: all 0.3s ease-in-out 0s;
   }
 }
 
@@ -171,6 +185,27 @@ li.footer-item.col {
   .nav-item.col {
     width: 15%;
   }
+
+  .nav-item.col a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .nav-item.col a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
 
 @media (max-width:55em) { /* THE SCREEN IS 55EM WIDE OR GREATER */
@@ -187,6 +222,15 @@ li.footer-item.col {
 
   .nav-item.col {
     width: 33.3%;
+    background-color: lavender;
+  }
+
+  .nav-item.col a:hover, .nav-item.col a:active {
+    color: purple;
+
+    background-color: lavender;
+
+    transition: all 0.3s ease-in-out 0s;
   }
 
   .nav-item.col a {
@@ -339,7 +383,9 @@ a.space-out-text {
   text-decoration: none;
 }
 
-
+a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
+  padding-right: 1rem;
+}
 
 @media (min-width:65em) {
   .flex-grid.parallax-img {
@@ -495,7 +541,8 @@ a.space-out-text {
 @media (max-width:65em) {
   a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
     font-size: 5rem;
-    color: white;
+    /* color: white; */
+    color: #7F2CCB;
     margin: 0;
   }
 
@@ -520,7 +567,7 @@ a.space-out-text {
 @media (max-width:52em) {
   a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
     font-size: 4rem;
-    color: white;
+    /* color: white; */
     margin: 0;
   }
 }
@@ -528,7 +575,7 @@ a.space-out-text {
 @media (max-width:48em) {
   a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
     font-size: 3rem;
-    color: white;
+    /* color: white; */
     margin: 0;
   }
 }
@@ -536,15 +583,15 @@ a.space-out-text {
 @media (max-width:35em) {
   a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
     font-size: 2.5rem;
-    color: white;
+    /* color: white; */
     margin: 0;
   }
 }
 
 @media (max-width:28em) {
   a.wrapper.paperfold h1, a.stroke-outline-doodle h1, a.space-out-text h1 {
-    font-size: 2rem;
-    color: white;
+    font-size: 1.8rem;
+    /* color: white; */
     margin: 0;
   }
 }
@@ -820,7 +867,9 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 .phase-title h2 {
   color: darkblue;
   font-family: 'Comfortaa', cursive;
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: 1.25rem;
+  /* font-weight: lighter; */
   padding: 0;
   padding-top: 2rem;
   margin: 0;
@@ -828,8 +877,11 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
 .phase-heading h3 {
   color: darkblue;
-  font-family: 'Comfortaa', cursive;
-  font-size: 1.5rem;
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: 'Patua One', cursive;
+  font-size: 3rem;
+  /* font-size: 1.5rem; */
+  font-weight: lighter;
   -webkit-text-stroke: 0.1px darkblue;
 
   padding: 1rem 0;
@@ -840,7 +892,8 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 .phase-content p {
   color: gray;
   font-family: 'Comfortaa', cursive;
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: 1.5rem;
   /* padding: 1rem 5rem 0rem 10rem; */
   padding: 1rem 5rem 0rem 0rem;
   margin: 0;
@@ -921,7 +974,7 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   }
 
   .phase-heading h3, .phase-content p, .phase-image {
-    padding-left: 8rem;
+    padding-left: 0rem;
   }
 }
 
@@ -931,7 +984,27 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   }
 
   .phase-heading h3, .phase-content p, .phase-image {
-    padding-left: 5rem;
+    padding-left: 0rem;
+  }
+
+  .phase-heading h3 {
+    font-size: 1.5rem;
+  }
+
+  .phase-title h2 {
+    font-size: 1rem;
+  }
+
+  .phase-content p {
+    font-size: 1rem;
+  }
+
+  .title-statement h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-partner-list h2{
+    font-size: 1rem;
   }
 
   .project-display.whitespace {
@@ -968,36 +1041,73 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 /* PROJECT PAGE DISPLAY END */
 
 /* ABOUT ME PAGE START*/
-.about-me-display {
-  padding: 0 8rem;
+.float-left {
+  float: left;
 }
 
-.about-me-display.about-me-image {
+.about-me-display-block {
+  padding: 0 8rem;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+}
+
+.about-me-display-photo {
+  /* padding: 0 8rem; */
+  width: 50%;
+  height: 100%;
+  /* position: absolute; */
+  /* display: inline-block; */
+}
+
+.about-me-display-text {
+  /* padding: 0 8rem; */
+  width: 50%;
+  height: 100%;
+  /* position: absolute; */
+  /* display: inline-block; */
+}
+
+.about-me-image, .about-me-text {
+/* .about-me-image, .about-me-text { */
+  /* width: 100%; */
   margin-top: 3rem;
+  height: 100%;
+  display: block;
+  top:0;
+  /* position: absolute; */
+  /* align-items: center; */
+  /* align-content: center; */
+  /* padding: 0 30%; */
+}
+
+.about-me-text {
   align-items: center;
-  align-content: center;
-  padding: 0 30%;
 }
 
 .about-me-image-block {
-  display: block;
+  /* display: block;
   background-color: purple;
   border-radius: 100%;
-  width: 100%;
+  width: 100%; */
+
+  padding: 2rem;
 }
+
 .about-me-image-block img{
+  height: 100%;
   width: 100%;
 }
 
 /* .about-me-display.about-me-title,  */
 
-.about-me-display.about-me-blurb {
+.about-me-blurb, .about-me-title {
   /* margin-right: 10rem; */
-  margin: 0 10rem;
+  /* margin: 0 10rem; */
+  width: 100%;
 }
 
-.about-me-display.about-me-title h2 {
+.about-me-title h2 {
   color: darkblue;
   /* font-family: 'Comfortaa', cursive; */
   font-family: 'Patua One', cursive;
@@ -1010,8 +1120,9 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   margin: 0;
 }
 
-.about-me-display.about-me-blurb h3 {
-  color: black;
+.about-me-blurb h3 {
+  /* color: black; */
+  color: gray;
   font-family: 'Comfortaa', cursive;
   font-size: 1.5rem;
   font-weight: lighter;
@@ -1020,7 +1131,7 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   margin: 0;
 }
 
-.about-me-display.contact-me h2 {
+/* .contact-me h2 {
   color: darkblue;
   font-family: 'Comfortaa', cursive;
   font-size: 2rem;
@@ -1029,36 +1140,85 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
 
   padding: 1rem 0;
   margin: 0;
+} */
+
+@media (max-width:75em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
+  .about-me-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-me-blurb h3 {
+    /* font-size: 1.6rem; */
+    font-size: 1.2rem;
+  }
+
+  .about-me-display {
+    padding: 0 2rem;
+    /* width: 100%; */
+  }
+
+  .about-me-display-photo{
+    width: 40%;
+  }
+  .about-me-display-text {
+    width: 60%;
+  }
+
+  .about-me-display-block {
+    padding: 0 4rem;
+    /* overflow: hidden;
+    position: relative; */
+    width: 100%;
+  }
 }
 
 @media (max-width:60em) { /* THE SCREEN IS 55EM WIDE OR SMALLER */
   .about-me-display.about-me-title, .about-me-display.about-me-blurb {
-    margin: 0 5rem;
+    /* margin: 0 5rem; */
   }
 
   .about-me-display.whitespace {
     height: 4rem;
   }
 
-  .about-me-display.about-me-image {
-    padding: 0 25%;
+  .about-me-image {
+    padding: 2rem;
   }
 
-  .about-me-display.about-me-title h2, .about-me-display.contact-me h2 {
+  /* .about-me-image, .about-me-text { */
+  .about-me-text {
+    /* width: 100%; */
+    margin-top: 0rem;
+  }
+
+  /* .about-me-title h2, .contact-me h2 {
     font-size: 1.8rem;
   }
 
-  .about-me-display.about-me-blurb h3 {
+  .about-me-blurb h3 {
     font-size: 1.6rem;
+  } */
+
+  .about-me-title h2, .contact-me h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-me-blurb h3 {
+    font-size: 1.2rem;
   }
 
   .about-me-display {
-    padding: 0 4rem;
+    /* padding: 0 2rem; */
+    width: 100%;
+  }
+
+  .about-me-display-photo, .about-me-display-text {
+    width: 100%;
   }
 }
 
 @media (max-width:41em) {
-  .about-me-display.about-me-title, .about-me-display.about-me-blurb {
+  .about-me-title, .about-me-blurb {
     margin: 0rem;
   }
 
@@ -1066,21 +1226,35 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
     height: 2rem;
   }
 
-  .about-me-display.about-me-image {
-    padding: 0 20%;
+  .about-me-image {
+    padding: 0rem;
   }
 
-  .about-me-display.about-me-title h2, .about-me-display.contact-me h2 {
+  .about-me-title h2, .contact-me h2 {
     font-size: 1.5rem;
   }
 
-  .about-me-display.about-me-blurb h3 {
+  .about-me-blurb h3 {
     font-size: 1.2rem;
   }
 
   .about-me-display {
-    padding: 0 2rem;
+    /* padding: 0 1rem; */
+    /* width: 100%; */
   }
+
+  .about-me-display-block {
+    padding: 0 2.5rem;
+  }
+
+  .about-me-image-block {
+    padding: 0 1rem;
+  }
+
+  /* .about-me-display {
+    width: 50%;
+    display: inline-block;
+  } */
 }
 
 /* ABOUT ME PAGE END */
@@ -1101,20 +1275,26 @@ h1:hover.interactive-project-title, h1:active.interactive-project-title {
   height: 3rem;
 }
 
+div.item-title {
+  background-color: rgb(154, 171, 185);
+}
+
 .item-title h1 {
-  color: darkblue;
-  font-family: 'Comfortaa', cursive;
+  color: white;
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: 'Patua One', cursive;
+  font-weight: lighter;
   font-size: 2rem;
 
-  padding: 0 0;
-  padding-bottom: 2rem;
-  padding-left: 6rem;
+  padding: 2rem 6rem;
+  /* padding-bottom: 2rem; */
+  /* padding-left: 6rem; */
   margin: 0;
 }
 
-.styleguide-display.title-statement {
+/* .styleguide-display.title-statement {
   padding-left: 6rem;
-}
+} */
 
 .title-statement-alt h1{
   color: indigo;
@@ -1134,8 +1314,30 @@ h1.font-2{
 }
 
 
-.styleguide-display.phase-title h2, .styleguide-display.phase-heading h3, .styleguide-display.phase-content p{
-  padding: 1rem 0;
-  padding-left: 6rem;
+.styleguide-display.title-statement h1, .styleguide-display.phase-title h2, .styleguide-display.phase-heading h3, .styleguide-display.phase-content p{
+  padding: 1rem 6rem;
+  /* padding-left: 6rem; */
 }
+@media (max-width:60em) {
+  .styleguide-display.title-statement h1, .styleguide-display.phase-title h2, .styleguide-display.phase-heading h3, .styleguide-display.phase-content p{
+    padding: 1rem 4rem;
+    /* padding-left: 6rem; */
+  }
+
+  .item-title h1 {
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width:60em) {
+  .styleguide-display.title-statement h1, .styleguide-display.phase-title h2, .styleguide-display.phase-heading h3, .styleguide-display.phase-content p{
+    padding: 1rem 2rem;
+    /* padding-left: 6rem; */
+  }
+
+  .item-title h1 {
+    padding: 1rem 2rem;
+  }
+}
+/* 60em 4rem 41 em 4rem 31 em 2rem */
 /* STYLEGUIDE FORMATTING TWEAKS END */
