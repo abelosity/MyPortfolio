@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/mainStyling.css">
-    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/flexbox.css"> -->
+    <link rel="stylesheet" href="css/masterCSS.css">
 
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -43,26 +44,41 @@
         </div>
         <div class="flex-grid parallax-img">
           <div class="parallax-img-text-container">
-            <!-- <p class="parallax-img-text">product designer. doodler. maker. conversationalist. tea connoisseur.</p> -->
-            <a href="#projects" class="wrapper paperfold product-designer">
+            <a class="wrapper paperfold product-designer">
               <h1 data-heading="red pop-up.">red pop-up.</h1>
             </a>
 
             <a class="stroke-outline-doodle">
               <h1>comic.</h1>
-              <!-- <p class="parallax-img-text">doodler.</p> -->
             </a>
 
             <a class="wrapper paperfold">
               <h1 data-heading="pop-up.">pop-up.</h1>
-              <!-- <p class="parallax-img-text">maker.</p> -->
             </a>
 
-            <a href="about-me.html" class="space-out-text">
-              <!-- <p class="parallax-img-text">conversationalist.</p> -->
+            <a class="space-out-text">
               <h1>light.</h1>
             </a>
-            <!-- <p class="parallax-img-text">tea connoisseur.</p> -->
+          </div>
+        </div>
+
+        <div class="sample-code-display-block">
+          <div class="sample-code-title-block code-section-title">
+            <h2>Relevant tags used:</h2>
+            <h3>.parallax-img</h3>
+            <h3>.parallax-img-text-container</h3>
+            <h3>.wrapper</h3>
+            <h3>.paperfold</h3>
+            <h3>.product-designer</h3>
+            <h3>.red</h3>
+            <h3>.pop-up</h3>
+            <h3>.stroke-outline-doodle</h3>
+            <h3>.space-out-text</h3>
+          </div>
+          <div class="sample-code-text-block-container">
+            <div class="sample-code-text-block">
+              <code>&lt;div class=&quot;flex-grid parallax-img&quot;&gt;<br>&lt;div class=&quot;parallax-img-text-container&quot;&gt;<br>&lt;a href=&quot;#projects&quot; class=&quot;wrapper paperfold product-designer&quot;&gt;<br>&lt;h1 data-heading=&quot;red pop-up.&quot;&gt;red pop-up.&lt;/h1&gt;<br>&lt;/a&gt;<br>&lt;a class=&quot;stroke-outline-doodle&quot;&gt;<br>&lt;h1&gt;comic.&lt;/h1&gt;<br>&lt;/a&gt;<br>&lt;a class=&quot;wrapper paperfold&quot;&gt;<br>&lt;h1 data-heading=&quot;pop-up.&quot;&gt;pop-up.&lt;/h1&gt;<br>&lt;/a&gt;<br>&lt;a href=&quot;about-me.html&quot; class=&quot;space-out-text&quot;&gt;<br>&lt;h1&gt;light.&lt;/h1&gt;<br>&lt;/a&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;</code>
+            </div>
           </div>
         </div>
 
@@ -77,6 +93,21 @@
           </div>
         </div>
         <div class="project-display whitespace purple"></div>
+
+        <div class="sample-code-display-block">
+          <div class="sample-code-title-block code-section-title">
+            <h2>Relevant tags used:</h2>
+            <h3>.project-display</h3>
+            <h3>.whitespace</h3>
+            <h3>.purple</h3>
+            <h3>.title-statement</h3>
+          </div>
+          <div class="sample-code-text-block-container">
+            <div class="sample-code-text-block">
+              <code>&lt;div class=&quot;project-display whitespace purple&quot;&gt;&lt;/div&gt;<br>&lt;div class=&quot;project-display purple&quot;&gt;<br>&lt;div class=&quot;title-statement&quot;&gt;<br>&lt;h1&gt;a project title or statement.&lt;/h1&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;project-display whitespace purple&quot;&gt;&lt;/div&gt;</code>
+            </div>
+          </div>
+        </div>
 
         <div class="styleguide-display item-title">
           <h1>Navigation bar</h1>
@@ -96,9 +127,23 @@
             <li class="nav-item col">
               <a href="#about-me">me</a>
             </li>
-            <!-- <li class="nav-item col">contact</li> -->
           </ul>
         </nav>
+
+        <div class="sample-code-display-block">
+          <div class="sample-code-title-block code-section-title">
+            <h2>Relevant tags used:</h2>
+            <h3>.nav-items-list</h3>
+            <h3>.nav-item</h3>
+            <h3>.logo</h3>
+            <h3>.col</h3>
+          </div>
+          <div class="sample-code-text-block-container">
+            <div class="sample-code-text-block">
+              <code>&lt;nav id=&quot;nav-items&quot;&gt;<br>&lt;ul class=&quot;nav-items-list flex-grid-nav&quot;&gt;<br>&lt;li class=&quot;nav-item logo&quot;&gt;<br>&lt;a href=&quot;index.html&quot;&gt;abelo.&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;li class=&quot;nav-item col&quot;&gt;<br>&lt;a href=&quot;index.html#projects&quot;&gt;work&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;li class=&quot;nav-item col&quot;&gt;<br>&lt;a href=&quot;#&quot;&gt;resume&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;li class=&quot;nav-item col&quot;&gt;<br>&lt;a href=&quot;#about-me&quot;&gt;me&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/nav&gt;</code>
+            </div>
+          </div>
+        </div>
 
         <div class="styleguide-display item-title">
           <h1>Footer</h1>
@@ -114,9 +159,23 @@
             <li class="footer-item col">
               <a href="#">references</a>
             </li>
-            <!-- <li class="nav-item col">contact</li> -->
           </ul>
         <footer>
+
+        <div class="sample-code-display-block">
+          <div class="sample-code-title-block code-section-title">
+            <h2>Relevant tags used:</h2>
+            <h3>.footer-items-list</h3>
+            <h3>.flex-grid-footer</h3>
+            <h3>.footer-item</h3>
+            <h3>.col</h3>
+          </div>
+          <div class="sample-code-text-block-container">
+            <div class="sample-code-text-block">
+              <code>&lt;footer&gt;<br>&lt;ul class=&quot;footer-items-list flex-grid-footer&quot;&gt;<br>&lt;li class=&quot;footer-item col&quot;&gt;<br>&lt;a href=&quot;styleguide.html&quot;&gt;styleguide&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;li class=&quot;footer-item col&quot;&gt;<br>&lt;a href=&quot;about-me.html&quot;&gt;contact me&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;li class=&quot;footer-item col&quot;&gt;<br>&lt;a href=&quot;#&quot;&gt;references&lt;/a&gt;<br>&lt;/li&gt;<br>&lt;/ul&gt; &lt;footer&gt;</code>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="text">
@@ -140,7 +199,24 @@
           <h2>Heading 3</h2>
         </div>
         <div class="styleguide-display phase-content">
-          <p>Paragraph text - lorem ipsum potato tomato jibber jabber yabber woot hoot kahlua.</p>
+          <p>Lorem ipsum potato tomato jibber jabber yabber woot hoot kahlua.</p>
+        </div>
+
+        <div class="sample-code-display-block">
+          <div class="sample-code-title-block code-section-title">
+            <h2>Relevant tags used:</h2>
+            <h3>.styleguide-display</h3>
+            <h3>.title-statement</h3>
+            <h3>.title-statement-alt</h3>
+            <h3>.phase-heading</h3>
+            <h3>.phase-title</h3>
+            <h3>.phase-content</h3>
+          </div>
+          <div class="sample-code-text-block-container">
+            <div class="sample-code-text-block">
+              <code>&lt;div class=&quot;styleguide-display title-statement title-statement-alt&quot;&gt;<br>&lt;h1&gt;Heading 1&lt;/h1&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;styleguide-display phase-heading&quot;&gt;<br>&lt;h3&gt;Heading 2&lt;/h3&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;styleguide-display phase-title&quot;&gt;<br>&lt;h2&gt;Heading 3&lt;/h2&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;styleguide-display phase-content&quot;&gt;<br>&lt;p&gt;Lorem ipsum potato tomato jibber jabber yabber woot hoot kahlua.&lt;/p&gt;<br>&lt;/div&gt;</code>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -152,7 +228,7 @@
         <div class="flex-grid project-grid-display">
           <div class="project-grid-block">
               <a href="diyspo.html">
-                <img class="img-fit-cover diyspo-image" src="img/diyspo/diyspo-9.jpg">
+                <img class="img-fit-cover diyspo-image" src="img/diyspo/diyspo-9.jpg" alt="Project grid image example 1">
                 <div class="hover-overlay">
                   <div class="overlay-text">
                     <p class="project-grid-title">diyspo</p>
@@ -164,7 +240,7 @@
 
           <div class="project-grid-block">
             <a href="bude.html">
-              <img class="img-fit-cover bude-image" src="img/flashlight/flashlight-1.png">
+              <img class="img-fit-cover bude-image" src="img/flashlight/flashlight-1.png" alt="Project grid image example 2">
               <div class="hover-overlay">
                 <div class="overlay-text">
                   <p class="project-grid-title">flash</p>
@@ -172,6 +248,26 @@
                 </div>
               </div>
             </a>
+          </div>
+        </div>
+
+        <div class="sample-code-display-block">
+          <div class="sample-code-title-block code-section-title">
+            <h2>Relevant tags used:</h2>
+            <h3>.project-grid-display</h3>
+            <h3>.project-grid-block</h3>
+            <h3>.img-fit-cover</h3>
+            <h3>.diyspo-image</h3>
+            <h3>.bude-image</h3>
+            <h3>.hover-overlay</h3>
+            <h3>.overlay-text</h3>
+            <h3>.project-grid-title</h3>
+            <h3>.project-brief-desc</h3>
+          </div>
+          <div class="sample-code-text-block-container">
+            <div class="sample-code-text-block">
+              <code>&lt;div class=&quot;flex-grid project-grid-display&quot;&gt;<br>&lt;div class=&quot;project-grid-block&quot;&gt;<br>&lt;a href=&quot;diyspo.html&quot;&gt;<br>&lt;img class=&quot;img-fit-cover diyspo-image&quot; src=&quot;img/diyspo/diyspo-9.jpg&quot;&gt;<br>&lt;div class=&quot;hover-overlay&quot;&gt;<br>&lt;div class=&quot;overlay-text&quot;&gt;<br>&lt;p class=&quot;project-grid-title&quot;&gt;diyspo&lt;/p&gt;<br>&lt;p class=&quot;project-brief-desc&quot;&gt;a medical purpose VR headset&lt;/p&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;/a&gt;<br>&lt;/div&gt;<br>&lt;div class=&quot;project-grid-block&quot;&gt;<br>&lt;a href=&quot;bude.html&quot;&gt;<br>&lt;img class=&quot;img-fit-cover bude-image&quot; src=&quot;img/flashlight/flashlight-1.png&quot;&gt;<br>&lt;div class=&quot;hover-overlay&quot;&gt;<br>&lt;div class=&quot;overlay-text&quot;&gt;<br>&lt;p class=&quot;project-grid-title&quot;&gt;flash&lt;/p&gt;<br>&lt;p class=&quot;project-brief-desc&quot;&gt;an arthritis friendly flashlight&lt;/p&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;<br>&lt;/a&gt;<br>&lt;/div&gt;<br>&lt;/div&gt;</code>
+            </div>
           </div>
         </div>
       </div>
