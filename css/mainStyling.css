@@ -1258,6 +1258,12 @@ h1.font-2 {
   padding-bottom: 1rem;
 }
 
+section div.reference-block.code-section-title {
+  background-color: lightgrey;
+  display: inline-block;
+  padding: 0 6rem 2rem 0;
+  width: 100%;
+}
 
 .styleguide-display.title-statement h1, .styleguide-display.phase-title h2, .styleguide-display.phase-heading h3, .styleguide-display.phase-content p{
   padding: 1rem 6rem;
@@ -1273,6 +1279,10 @@ h1.font-2 {
 
   .code-section-title h3 {
     padding: 0.25rem 0 0 5rem;
+  }
+
+  div.reference-block.code-section-title {
+    padding: 0 4rem 1rem 0;
   }
 
   .item-title h1 {
@@ -1291,6 +1301,10 @@ h1.font-2 {
 
   .code-section-title h3 {
     padding: 0.25rem 0 0 2.5rem;
+  }
+
+  div.reference-block.code-section-title {
+    padding: 0 2rem 1rem 0;
   }
 
   .item-title h1 {
